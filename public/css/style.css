@@ -1,0 +1,23 @@
+input[type="text"] {
+
+   box-sizing: border-box;
+    width: 40%;
+    border: .25em solid;
+    position: relative;
+
+    margin-left: 400px;
+    margin-top: 250px;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    position: relative;
+    margin-left: 650px;
+    margin-top: 30px;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 5px 2px #888888;
+    border: 2px solid black;
+}
+
