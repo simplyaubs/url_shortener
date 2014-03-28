@@ -4,16 +4,17 @@ input[type="text"] {
     width: 40%;
     border: .25em solid;
     position: relative;
-
-    margin-left: 400px;
-    margin-top: 250px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20%;
     padding: 10px;
 }
 
 input[type="submit"] {
     position: relative;
-    margin-left: 650px;
-    margin-top: 30px;
+    margin-left: 40%;
+    margin-right: 25%;
+    margin-top: 2%;
     background-color: blue;
     color: white;
     padding: 10px;
