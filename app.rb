@@ -11,13 +11,13 @@ class App < Sinatra::Application
   post '/' do
     ORIGINAL_URL << params[:input_url]
     ORIGINAL_URL.each_with_index do |url, index|
-      SHORT_URL << "http://www.staging-url-shortener.herokuapp.com/#{index + 1}"
+      SHORT_URL << "http://staging-url-shortener.herokuapp.com/#{index + 1}"
     end
     redirect '/result'
   end
 
   get '/result' do
-    erb :result, :locals => {:url => ORIGINAL_URL, :new_url => SHORT_URL}
+    erb :result, :locals => {:url => ORIGINAL_URL.first, :new_url => SHORT_URL.first}
 
   end
 
