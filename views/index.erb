@@ -2,16 +2,16 @@
 <html>
 
 <head>
+  <link href="styles/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" type="text/css" rel="stylesheet">
   <title>URL Shortener</title>
 </head>
 
 <body>
-
-<form action="/" method="post">
-  <input type="text" name="input_url" placeholder='Enter the URL you would like to "shorten"'>
+<form class="shorten-url-inputs" action="/" method="post">
+  <input class="url-to-shorten" type="text" name="input_url" value='Enter the URL you would like to "shorten"' size="50">
   <br>
-  <input type="submit" name="url" value="Shorten">
+  <input class="action" type="submit" name="url" value="Shorten">
 </form>
 </div>
 </body>
