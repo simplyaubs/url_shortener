@@ -6,17 +6,23 @@
 
 .url-to-shorten {
     width: 50%;
-    font-size: 1.25em;
-    margin: .5em auto;
-    padding: .25em;
+    font-size: .75em;
+    margin: 1em auto;
+    margin-top: 20%;
+    margin-bottom: 0px;
+    padding: .5em;
+    font-weight: bold;
+    border: 2px solid black;
 }
 
-.action {
+.button {
     display: inline;
     padding: .5em;
     background-color: #0077ff;
     color: #fff;
-    margin: auto;
+    margin: 0 auto auto auto;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
 }
 
 .h3 {
