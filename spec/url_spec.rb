@@ -14,6 +14,7 @@ feature 'url shortener' do
     click_on("Shorten")
     expect(page).to have_content "http://tutorials.gschool.it/http_with_sinatra_spike"
     expect(page).to have_content "http://staging-url-shortener.herokuapp.com/1"
-
+    click_link('"Shorten" another URL')
+    expect(page).to have_content "http://staging-url-shortener.herokuapp.com/2"
   end
 end
