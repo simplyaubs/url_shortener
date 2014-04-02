@@ -8,22 +8,13 @@ class App < Sinatra::Application
   end
 
   post '/' do
-    ORIGINAL_URL << params[:input_url]
-    ORIGINAL_URL
-    redirect "/#{ORIGINAL_URL.length}"
+    orig_url = params[:input_url]
+    ORIGINAL_URL << {orig_url => "staging-url-shortener.herokuapp.com/#{ORIGINAL_URL.length+1}"}
+    redirect "/#{ORIGINAL_URL.length.to_s}"
   end
 
   get '/:id' do
-    erb :result, locals: {:url => ORIGINAL_URL[params[:id].to_i-1], :new_url => params[:id].to_i}
-
-    #params = {
-    #  :id => "#{ORIGINAL_URL.length.to_s}",
-    #  :result => "foo"
-    #}
-
-
-    #erb :result, :locals => {:url => ORIGINAL_URL.first, :new_url => "foo"}
-
+    erb :result, locals: {:url => ORIGINAL_URL[(params[:id].to_i)-1].keys[0], :new_url => "staging-url-shortener.herokuapp.com/#{params[:id].to_i-1}"}
 
   end
 
